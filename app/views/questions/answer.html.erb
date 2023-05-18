@@ -1,1 +1,14 @@
-<p><% @answer %></p>
+<h1> Stupid answer </h1>
+
+<p>
+
+  <% if @question.blank?%>
+  <p> Hi </p>
+  <% else %>
+  <%=@question%>
+  <% end %>
+</p>
+
+<p> <%=@answer %> </p>
+
+<%= link_to 'Question again?', ask_path %>

@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
 
     if @question.blank?
       @answer = 'huh?'
-    elsif @question.last == '?'
+    elsif @question.ends_with?("?")
       @answer = 'Silly question, get dressed and go to work!'
     elsif @question == 'I am going to work'
       @answer = 'Well done'
